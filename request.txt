@@ -1,0 +1,15 @@
+Broccoli
+36000
+an herbaceous annual or biennial grown for its edible flower heads which are used as a vegetable
+
+Cabbage
+12000
+a leafy green biennial plant grown as an annual vegetable crop for its dense-leaved heads.
+
+Iced tea
+5000
+a form of cold tea
+
+Peanut
+14000
+legume of the pea family (Fabaceae), grown for its edible seeds
