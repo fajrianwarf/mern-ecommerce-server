@@ -13,3 +13,5 @@ a form of cold tea
 Peanut
 14000
 legume of the pea family (Fabaceae), grown for its edible seeds
+
+http://localhost:3000/api/products?q=cabbage&tags[]=take%20away&category=vegetable

@@ -8,15 +8,52 @@ const Tag = require('../tags/model');
 //-----------------display all data--------------//
 const index = async (req, res, next) => {
     try {
-        let { skip = 0, limit = 10 } = req.query;
+        let { skip = 0, limit = 10, q='', category='', tags=[] } = req.query;
 
+        let criteria = {};
+
+        if(q.length){
+            criteria = {
+                ...criteria,
+                name: {$regex: `${q}`, $options: 'i'}
+            }
+        }
+
+        if(category.length){
+            let categoryResult = await Category.findOne({name: {$regex: `${category}`, $options: 'i'}});
+
+            if(categoryResult){
+                criteria = {...criteria, category: categoryResult._id}
+            }
+        }
+
+        //still not perfect, shouldnt be displaying anything if the tags are not found
+        if(tags.length) {
+            const newTags = tags.map(tag => new RegExp(tag, 'i'))
+            // console.log(newTags);
+            // let tagsResult= await Tag.find({name: {$in: [/^take away/i, /^fresh/i ] }});
+            let tagsResult= await Tag.find({name: {$in: newTags }});
+            
+            if(tagsResult.length > 0){
+                criteria = {...criteria, tags:  {$in: tagsResult.map(tag => tag._id)}}
+            }
+        }
+
+        console.log(criteria);
+        let count = await Product.find().countDocuments();
+        
         let product = await Product
-            .find()
-            .skip(parseInt(skip))
+            .find(criteria)
+            .skip(parseInt(skip))``
             .limit(parseInt(limit))
             .populate('category')
             .populate('tags');
-        return res.json(product);
+
+        return res.json({
+            data: product,
+            count
+        });
+
     } catch (err) {
         next(err);
     }
@@ -40,6 +77,7 @@ const store = async (req, res, next) => {
         //checking if there is tags
         if(payload.tags && payload.tags.length > 0){
             let tags = await Tag.find({name: {$in: payload.tags}});
+            // console.log(tags);
             if(tags.length){
                 payload = {...payload, tags: tags.map(tag => tag._id)};
             } else {
@@ -148,7 +186,7 @@ const update = async (req, res, next) => {
                         fs.unlinkSync(currentImage);
                     }
 
-                    product = await Product.findByIdAndUpdate(id, payload, {
+                    product = await Product.findByIdAndUpdate(id, {...payload, img_url: filename}, {
                         new: true,
                         runValidators: true
                     });

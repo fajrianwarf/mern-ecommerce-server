@@ -67,7 +67,7 @@ const destroy = async (req, res, next) => {
         return res.json(category);
         
     } catch (error) {
-        if( err && err.mname === 'ValidationError' ) {
+        if( err && err.name === 'ValidationError' ) {
             return res.json({
                 error: 1,
                 message: err.message,
@@ -75,7 +75,7 @@ const destroy = async (req, res, next) => {
             });
         }
 
-        next(err)
+        next(err);
     }
 }
 
