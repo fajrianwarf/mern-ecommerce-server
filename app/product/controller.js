@@ -44,7 +44,7 @@ const index = async (req, res, next) => {
         
         let product = await Product
             .find(criteria)
-            .skip(parseInt(skip))``
+            .skip(parseInt(skip))
             .limit(parseInt(limit))
             .populate('category')
             .populate('tags');
