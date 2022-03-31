@@ -1,17 +1,19 @@
 # mern-ecommerce-server
 
-a backend and a server for ecommerce app
+## A backend and a server for ecommerce app :
 
-deployed in heroku :
+> [https://github.com/fajrianwarf/mern-ecommerce-app](https://github.com/fajrianwarf/mern-ecommerce-app)
 
-```
-https://mern-ecommerce-server-fajri.herokuapp.com/
-```
+You can see this repository deployed in heroku :
+
+> [https://mern-ecommerce-server-fajri.herokuapp.com/](https://mern-ecommerce-server-fajri.herokuapp.com/)
 
 This repository currently using mongoDB Atlas.
 If you want to use it MongoDB locally, then you can setting it in `.env` and `database/index.js`
 
-Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
+> Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
+
+## APIs ROUTING
 
 | Entity               | Method   | Route                   | Description                                       |
 | -------------------- | -------- | ----------------------- | ------------------------------------------------- |
