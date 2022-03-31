@@ -2,6 +2,17 @@
 
 a backend and a server for ecommerce app
 
+deployed in heroku :
+
+```
+https://mern-ecommerce-server-fajri.herokuapp.com/
+```
+
+This repository currently using mongoDB Atlas.
+If you want to use it MongoDB locally, then you can setting it in `.env` and `database/index.js`
+
+Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
+
 | Entity               | Method   | Route                   | Description                                       |
 | -------------------- | -------- | ----------------------- | ------------------------------------------------- |
 | **Product**          | `GET`    | /products               | _Getting list of the products_                    |
