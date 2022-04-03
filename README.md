@@ -11,7 +11,7 @@ You can see this repository deployed in heroku :
 This repository currently using mongoDB Atlas.
 If you want to use it MongoDB locally, then you can setting it in `.env` and `database/index.js`
 
-> Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
+> Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## APIs ROUTING
 
