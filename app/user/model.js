@@ -6,9 +6,9 @@ const bcrypt = require('bcrypt');
 let userSchema = Schema({
     full_name: {
         type: String,
-        required: [true, 'Name is required'],
-        maxlength: [255, 'Name must be 3 - 255 characters'],
-        minlength: [3, 'Name must be 3 - 255 characters']
+        required: [true, 'name is required'],
+        maxlength: [255, 'name must be around 3 to 255 characters'],
+        minlength: [3, 'name must be around 3 to 255 characters']
     },
 
     customer_id: {
@@ -23,8 +23,9 @@ let userSchema = Schema({
 
     password: {
         type: String,
-        required: [true, 'Password is required'],
-        maxlength: [255, 'Password maximum length is 255 characters']
+        required: [true, 'password is required'],
+        maxlength: [255, 'password maximum length is 255 characters'],
+        minlength: [6, 'password minimum 6 character']
     },
 
     role: {
@@ -43,7 +44,7 @@ let userSchema = Schema({
 userSchema.path('email').validate( function(value){
     const EMAIL_RE = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     return EMAIL_RE.test(value);
-}, attr => `${attr.value} must a valid email`);
+}, attr => `${attr.value} must be a valid email`);
 
 
 //validation email if the email is already registered
