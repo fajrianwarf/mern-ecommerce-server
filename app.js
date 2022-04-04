@@ -7,6 +7,7 @@ const cors = require('cors');
 
 const { decodeToken } = require('./middlewares')
 
+//Apis
 const productRoute = require('./app/product/router');
 const categoryRoute = require('./app/category/router');
 const tagRoute = require('./app/tags/router');
@@ -30,7 +31,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api/images', express.static(path.join(__dirname, 'public/images/products')));
 app.use(decodeToken());
 
 //routing
