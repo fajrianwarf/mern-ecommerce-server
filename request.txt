@@ -1,17 +1,82 @@
 Broccoli
 36000
-an herbaceous annual or biennial grown for its edible flower heads which are used as a vegetable
+Edible flower heads which contains a many nutrients.
 
 Cabbage
 12000
-a leafy green biennial plant grown as an annual vegetable crop for its dense-leaved heads.
+A leafy green that usually for salads.
 
-Iced tea
-5000
-a form of cold tea
+Carrot
+7000
+A tapering orange-colored root eaten as a vegetable.
+
+Cucumber
+10000
+A long, green-skinned fruit with watery flesh.
 
 Peanut
 14000
-legume of the pea family (Fabaceae), grown for its edible seeds
+Legume of the pea family (Fabaceae), grown for its edible seeds.
+
+Green tea
+12000
+Brewed green tea that imported from japan.
+
+Chocolate drink
+12000
+A drink made by mixing sweetened cocoa powder.
+
+Coffee
+10000
+A hot drink made from the roasted and ground seeds (coffee beans) of a tropical shrub.
+
+Cappucinno
+12000
+Coffee made with milk that has been frothed up with pressurized steam.
+
+Tea
+7000
+Drink made by infusing the dried crushed leaves of the tea plant.
+
+Donut
+5000
+A small fried cake of sweetened dough, typically in the shape of a ball or ring.
+
+Burger
+15000
+A dish consisting of a round patty of ground beef.
+
+Pancake
+12000
+A thin, flat cake of batter that fried and turned in a pan.
+
+Hot dog
+12000
+A frankfurter, soft roll and topped with various condiments.
+
+French fries
+7000
+A thin strip of potato, that are deep fried until golden brown.
+
+Apple
+35000
+Round fruit of a tree of the rose family, which has sweet taste.
+
+Lemon
+15000
+A yellow, oval citrus fruit with thick skin and fragrant, acidic juice.
+
+Watermelon
+25000
+The large fruit with smooth green skin, red pulp, and watery juice.
+
+Grape
+90000
+A berry, growing in clusters on a grapevine, eaten as fruit, and used in making wine.
+
+Orange
+30000
+A round juicy citrus fruit with a tough bright reddish-yellow rind.
+
 
 http://localhost:3000/api/products?q=cabbage&tags[]=take%20away&category=vegetable

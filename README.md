@@ -40,4 +40,4 @@ And then, open [http://localhost:3000](http://localhost:3000) to view it in your
 | **Auth**             | `POST`   | auth/register              | _Registering a new user (user or admin)_            |
 |                      | `POST`   | auth/login                 | _Login using email_                                 |
 |                      | `POST`   | auth/logout                | _Logout user using token_                           |
-|                      | `GET`    | auth/me                    | _Checking user login and profile using token _      |
+|                      | `GET`    | auth/me                    | _Checking user login and profile using token_       |
