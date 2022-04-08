@@ -39,7 +39,7 @@ const deliveryAddressSchema = Schema({
     },
 
     address_note : {
-        type: Number,
+        type: String,
         maxlength: [255, 'Note maximum 10 characters']
     },
 
