@@ -78,5 +78,48 @@ Orange
 30000
 A round juicy citrus fruit with a tough bright reddish-yellow rind.
 
+REQUEST CARTS
+{
+    "items": [
+        {
+        "name": "Cucumber",
+        "qty": 1,
+        "price": 10000,
+        "img_url": "6ab4ee19a2bfb06d2e5754f1daaa28d7.jpg",
+        "user": {
+            "customer_id": 2,
+            "email": "admin1@gmail.com",
+            "full_name": "admin1",
+            "iat": 1649219905,
+            "role": "admin",
+            "updatedAt": "2022-04-06T04:25:13.800Z",
+            "_id": "6249b7c0bdbf5e023458719d"
+        },
+        "product": {
+            "_id": "624b040a5b9957d4fc4f7300",
+            "name": "Cucumber",
+            "description": "A long, green-skinned fruit with watery flesh",
+            "price": 10000,
+            "img_url": "6ab4ee19a2bfb06d2e5754f1daaa28d7.jpg",
+            "category": {
+                "_id": "6249bab7bdbf5e02345871c6",
+                "name": "Vegetable",
+                "__v": 0
+            },
+            "tags": [
+                {
+                  "_id": "6249ba4abdbf5e02345871ba",
+                  "name": "Fresh",
+                  "__v": 0
+                }
+            ],
+              "createdAt": "2022-04-04T14:43:22.425Z",
+              "updatedAt": "2022-04-04T14:43:22.425Z",
+              "__v": 0
+            }
+        }
+    ]
+}
+
 
 http://localhost:3000/api/products?q=cabbage&tags[]=take%20away&category=vegetable
