@@ -5,7 +5,7 @@ const orderItemSchema = Schema({
 
     name: {
         type: String,
-        minlength: [ 5, 'Name length min 5 characters ' ],
+        minlength: [ 3, 'Name length min 3 characters ' ],
         required: [ true, 'Name is required']
     },
 
