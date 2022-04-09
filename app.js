@@ -27,7 +27,7 @@ app.set('view engine', 'pug');
 
 //middlewares
 app.use(cors(
-  {origin: 'https://mern-ecommerce-server-fajri.herokuapp.com', credentials: true} //you had to change it when you want to run it in local, or you can delete this line 
+  // {origin: 'https://mern-ecommerce-server-fajri.herokuapp.com', credentials: true} //trial to change cors origin setting... you had to change it when you want to run it in local, or you can delete this line 
 ));
 app.use(logger('dev'));
 app.use(express.json());
