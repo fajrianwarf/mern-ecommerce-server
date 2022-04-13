@@ -14,6 +14,7 @@ const invoiceSchema = Schema({
     },
 
     delivery_address: {
+        name: {type: String, required: [ true, 'Address name must be filled' ]},
         city: {type: String, required: [ true, 'City must be filled' ]},
         province: {type: String, required: [ true, 'Province must be filled' ]},
         district: {type: String, required: [ true, 'District must be filled' ]},
@@ -34,6 +35,11 @@ const invoiceSchema = Schema({
     },
 
     user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
+
+    order: {
         type: Schema.Types.ObjectId,
         ref: 'Order'
     }

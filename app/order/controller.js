@@ -50,10 +50,12 @@ const store = async (req, res, next) => {
             status: 'waiting_payment',
             delivery_fee: delivery_fee,
             delivery_address: {
-                city: address.province,
-                province: address.province,
-                district: address.district,
+                name: address.name,
                 street: address.street,
+                district: address.district,
+                city: address.city,
+                province: address.province,
+                postal_code: address.postal_code,
                 address_note: address.address_note
             },
             user: req.user._id
