@@ -121,5 +121,77 @@ REQUEST CARTS
     ]
 }
 
+ORDER CARTS{
+    "data": {
+        "status": "waiting_payment",
+        "delivery_fee": 0,
+        "delivery_address": {
+            "city": "Semarang",
+            "province": "Central Java",
+            "district": "Pedurungan",
+            "street": "Soekarno-Hatta Street",
+            "postal_code": "50196",
+            "address_note": "Green colored 2 stories building"
+        },
+        "user": "6249b7c0bdbf5e023458719d",
+        "order_items": [
+            {
+                "name": "Cucumber",
+                "price": 10000,
+                "qty": 2,
+                "product": "624b040a5b9957d4fc4f7300",
+                "order": "6252257a4c7db709a2b8f46d",
+                "_id": "6252257a4c7db709a2b8f46f",
+                "__v": 0
+            },
+            {
+                "name": "Carrot",
+                "price": 7000,
+                "qty": 2,
+                "product": "624b038d5b9957d4fc4f72fb",
+                "order": "6252257a4c7db709a2b8f46d",
+                "_id": "6252257a4c7db709a2b8f470",
+                "__v": 0
+            }
+        ],
+        "_id": "6252257a4c7db709a2b8f46d",
+        "createdAt": "2022-04-10T00:31:54.878Z",
+        "updatedAt": "2022-04-10T00:31:54.878Z"
+    },
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+        "content-length": "707",
+        "content-type": "application/json; charset=utf-8"
+    },
+    "config": {
+        "transitional": {
+            "silentJSONParsing": true,
+            "forcedJSONParsing": true,
+            "clarifyTimeoutError": false
+        },
+        "transformRequest": [
+            null
+        ],
+        "transformResponse": [
+            null
+        ],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1,
+        "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ5YjdjMGJkYmY1ZTAyMzQ1ODcxOWQiLCJmdWxsX25hbWUiOiJhZG1pbjEiLCJlbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA2VDA0OjI1OjEzLjgwMFoiLCJjdXN0b21lcl9pZCI6MiwiaWF0IjoxNjQ5MjE5OTA1fQ.yugKmJKjFzn1Rsau62vSMZPq6uoapeF0uQus2MW62EE"
+        },
+        "method": "post",
+        "url": "http://localhost:3000/api/orders",
+        "data": "{\"user\":{\"_id\":\"6249b7c0bdbf5e023458719d\",\"full_name\":\"admin1\",\"email\":\"admin1@gmail.com\",\"role\":\"admin\",\"updatedAt\":\"2022-04-06T04:25:13.800Z\",\"customer_id\":2,\"iat\":1649219905},\"delivery_fee\":0,\"order_items\":[{\"_id\":\"6252256e86e0e0fd772a77d0\",\"product\":{\"_id\":\"624b040a5b9957d4fc4f7300\",\"name\":\"Cucumber\",\"description\":\"A long, green-skinned fruit with watery flesh\",\"price\":10000,\"img_url\":\"6ab4ee19a2bfb06d2e5754f1daaa28d7.jpg\",\"category\":\"6249bab7bdbf5e02345871c6\",\"tags\":[\"6249ba4abdbf5e02345871ba\"],\"createdAt\":\"2022-04-04T14:43:22.425Z\",\"updatedAt\":\"2022-04-04T14:43:22.425Z\",\"__v\":0},\"user\":\"6249b7c0bdbf5e023458719d\",\"img_url\":\"6ab4ee19a2bfb06d2e5754f1daaa28d7.jpg\",\"name\":\"Cucumber\",\"price\":10000,\"qty\":2},{\"_id\":\"6252256e86e0e0fd772a77d1\",\"product\":{\"_id\":\"624b038d5b9957d4fc4f72fb\",\"name\":\"Carrot\",\"description\":\"A tapering orange-colored root eaten as a vegetable.\",\"price\":7000,\"img_url\":\"e389af1519abeadb0fbe1f2bd847a76c.jpg\",\"category\":\"6249bab7bdbf5e02345871c6\",\"tags\":[\"6249ba4abdbf5e02345871ba\"],\"createdAt\":\"2022-04-04T14:41:17.667Z\",\"updatedAt\":\"2022-04-04T14:41:17.667Z\",\"__v\":0},\"user\":\"6249b7c0bdbf5e023458719d\",\"img_url\":\"e389af1519abeadb0fbe1f2bd847a76c.jpg\",\"name\":\"Carrot\",\"price\":7000,\"qty\":2}],\"delivery_address\":{\"_id\":\"624fd83791a167af273ef03c\",\"name\":\"my Home\",\"street\":\"Soekarno-Hatta Street\",\"district\":\"Pedurungan\",\"province\":\"Central Java\",\"city\":\"Semarang\",\"postal_code\":50196,\"address_note\":\"Green colored 2 stories building\",\"user\":\"6249b7c0bdbf5e023458719d\",\"createdAt\":\"2022-04-08T06:37:43.976Z\",\"updatedAt\":\"2022-04-08T06:37:43.976Z\",\"__v\":0}}"
+    },
+    "request": {}
+}
+
 
 http://localhost:3000/api/products?q=cabbage&tags[]=take%20away&category=vegetable
