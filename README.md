@@ -2,7 +2,7 @@
 
 ### A backend and a server for ecommerce app from [mern-ecommerce-app](https://github.com/fajrianwarf/mern-ecommerce-app)
 
-You can see this repository deployed in heroku :
+You can see this repository deployed in heroku in this link below :
 
 > [mern-ecommerce-server-fajri](https://mern-ecommerce-server-fajri.herokuapp.com/)
 

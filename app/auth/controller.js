@@ -47,11 +47,9 @@ const login = (req, res, next) => {
         if(err) return next(err);
         if(!user) return res.json({error: 1, message: 'Email or password incorrect'});
 
-        // console.log(config.secretKey)
         let signed = jwt.sign(user, config.secretKey);
-
         await User.findByIdAndUpdate(user._id, {$push: {token: signed}});
-
+        
         res.json({
             message: 'Login successfully',
             user,
@@ -85,7 +83,7 @@ const me = (req, res, next) => {
             message: 'You are not login or token expired'
         });
     }
-
+    // console.log(req.user, 'requesssst')
     res.json(req.user);
 }
 
