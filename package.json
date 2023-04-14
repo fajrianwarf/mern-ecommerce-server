@@ -2,6 +2,7 @@
   "name": "mern-ecommerce-server",
   "version": "0.0.0",
   "private": true,
+  "main": "./bin/www",
   "scripts": {
     "start": "node ./bin/www",
     "startdev": "SET DEBUG=mern-ecommerce-server:* && nodemon ./bin/www"
